@@ -1,4 +1,4 @@
-# Sveltekit 2  +  php  + crud_orm  monorepo
+# Sveltekit 2  SSG +  php  + crud_orm  monorepo
 ---
 ### This repo intention was to make easy application framework for cheap php shared hosts . Php is used as backend , and typescript sveltekit as client frontend. 
 
