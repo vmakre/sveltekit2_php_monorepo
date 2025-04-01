@@ -22,17 +22,18 @@ https://github.com/mevdschee/php-crud-api
 
 ## Installation in empty folder :
 1. Install all libraries together
-<code>
+```
 git clone https://github.com/vmakre/sveltekit2_php_monorepo/ .
 
 npm i
 
 composer update
-</code>
+```
 2. Setup db connection
-<code file.php>
+```file.php>
 
-</code>
+
+```
 
 
 
