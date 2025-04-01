@@ -1,0 +1,8 @@
+{
+    "name": "vlatko/my-app01",
+    "type": "project",
+    "require": {
+        "flightphp/core": "^3.15",
+        "mevdschee/php-crud-api": "^2.14"
+    }
+}
