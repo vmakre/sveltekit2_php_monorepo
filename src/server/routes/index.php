@@ -2,9 +2,9 @@
 use flight\database\PdoWrapper;
 
 // db connect mysql
-$host='10.45.2.8';
-$user='zabbix';
-$pass='zabbix';
+$host='localhost';
+$user='root';
+$pass='';
 $db='sakila';
 Flight::register('db', PdoWrapper::class, [ 'mysql:host='.$host.';dbname='.$db.';charset=utf8mb4', $user, $pass ]);
 
