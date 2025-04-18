@@ -1,18 +1,35 @@
 <script lang="ts">
-let varijabla = $state();
+  import { onMount } from "svelte";
+  import client from "$lib/api/index.js";
+  
+  let data: Awaited<ReturnType<typeof getActor>> | undefined;
 
+  async function getActor() {
+    return client.GET("/records/actor", {
+      params: {
+        query: { filter: ["first_name,cs,joh"] },
+      },
 
+    });
+  }
 
-async function getActors(): Promise<App.SakilaActors[]> {
-		const res = await fetch("http://localhost:5000/WeatherForecast");
-		return await res.json();
-	}
-
-const kliknaf = () => {getActors()};
+  onMount(() => {
+    getActor().then((res) => (data = res));
+  });
 
 
 </script>
-<h1>ABOUT SvelteKit</h1>
+<h1>ABOUT SvelteKit AAAAAA</h1>
 <p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
 
-<button onclick={kliknaf} >Klikajjj</button>
+{#if data}
+    {#if data.error}
+      <div>There was an error: {data.error}</div>
+    {:else}
+      <pre><code>{JSON.stringify(data.data, undefined, 2)}</code></pre>
+    {/if}
+  {/if}
+
+
+
+  <button type="button" onclick={() => getActor().then((res) => (data = res))}>Another fact!</button>

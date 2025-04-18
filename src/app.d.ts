@@ -7,12 +7,7 @@ declare global {
 		// interface PageData {}
 		// interface PageState {}
 		// interface Platform {}
-		interface SakilaActors {
-			"actor_id": Number,
-            "first_name": String,
-            "last_name": String,
-            "last_update": Date
-		}
+
 	}
 }
 

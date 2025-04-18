@@ -5,17 +5,15 @@ use Tqdev\PhpCrudApi\Api;
 use Tqdev\PhpCrudApi\Config\Config;
 
 
-Flight::route('/apiv2/*', function (): void {
-  global $host ,$user,$db,$pass;
+Flight::route('/'.$_ENV['PUBLIC_CRUD_API'].'/*', function (): void {
   $config = new Config([
-    
     'driver' => 'mysql',
-    'address' => $host,
+    'address' => $_ENV['DB_HOST'],
     'port' => '3306',
-    'username' => $user,
-    'password' => $pass,
-    'database' => $db,
-    'basePath' => '/apiv2',
+    'username' => $_ENV['DB_USER'],
+    'password' => $_ENV['DB_PASSWORD'],
+    'database' => $_ENV['DB'],
+    'basePath' => '/'.$_ENV['PUBLIC_CRUD_API'],
     'debug' => true,
     'cors.allowedOrigins'=> "*",
     'cacheType' => 'TempFile',

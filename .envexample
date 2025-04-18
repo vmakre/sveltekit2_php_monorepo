@@ -1,0 +1,14 @@
+# .env.development
+APP_ENV=development
+
+# DB  mysql, 
+DB_TYPE=mysql
+DB_HOST=localhost
+DB=sakila
+DB_USER=root
+DB_PASSWORD=
+
+
+# api endpoints
+PUBLIC_CRUD_API=apiv2
+PUBLIC_SERVER=http://localhost:8080
