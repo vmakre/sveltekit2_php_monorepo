@@ -4,8 +4,9 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"dev": "vite dev & php -S localhost:8080 -t public",
-		"build": "vite build ",
+		"dev": "PUBLIC_CRUD_API=devbackend/apiv2 PUBLIC_SERVER=http://localhost:5173 vite dev & php -S localhost:8080 -t public",
+		"build": "vite build  --mode production",
+		"prod": "php -S localhost:8080 -t public",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",

@@ -4,7 +4,7 @@ require_once ROOT . '/vendor/autoload.php';
 use Symfony\Component\Dotenv\Dotenv;
 
 $dotenv = new Dotenv();
-$dotenv->load(ROOT.'/.env');
+$dotenv->load(ROOT.'/.env.local');
 
 require ROOT . '/src/server/routes/index.php';
 

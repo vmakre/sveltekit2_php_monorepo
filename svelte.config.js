@@ -1,5 +1,6 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+// import {codeInspectorPlugin } from 'code-inspector-plugin'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -17,11 +18,12 @@ const config = {
 			precompress: false,
 			strict: true,
 			fallback: 'index.html', // may differ from host to host
-			// paths: {
-			// 	base: '/public/build',
-			//   },
 	})
-	}
+	},
+	vitePlugin: {
+		inspector: true,
+
+	  }
 };
 
 export default config;

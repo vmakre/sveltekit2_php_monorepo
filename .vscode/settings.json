@@ -1,0 +1,7 @@
+{
+    // other config...
+
+    "terminal.integrated.env.linux": {
+        "EDITOR": "code"
+    }
+}

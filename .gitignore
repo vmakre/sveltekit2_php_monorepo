@@ -8,7 +8,7 @@ node_modules
 /.svelte-kit
 /public/
 /vendor
-.vscode
+.vscode/launch.json
 
 /tmp/
 

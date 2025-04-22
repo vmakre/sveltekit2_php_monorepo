@@ -1,8 +1,13 @@
 <?php
 use flight\database\PdoWrapper;
-Flight::register('db', PdoWrapper::class, [ 'mysql:host='.$_ENV['DB_HOST'].';dbname='.$_ENV['DB'].';charset=utf8mb4', $_ENV['DB_USER'], $_ENV['DB_PASS'] ]);
+Flight::register('db', PdoWrapper::class, [ 'mysql:host='.$_ENV['DB_HOST'].';dbname='.$_ENV['DB'].';charset=utf8mb4', $_ENV['DB_USER'], $_ENV['DB_PASSWORD'] ]);
 
-
+Flight::route('/api/versions', function (): void {
+  echo json_encode([
+    'flightphp/core',
+    'svelte'
+  ]);
+});
 
 
 // Flight::route('/api/versions', function (): void {

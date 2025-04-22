@@ -5,12 +5,11 @@
   let data: Awaited<ReturnType<typeof getActor>> | undefined;
 
   async function getActor() {
-    return client.GET("/records/actor", {
+    return client.GET("/records/film", {
       params: {
         query: { 
-          filter: ["first_name,cs,joh"] ,
-          join:["language"]
-        },
+          join:["language"],
+          size: "5" },
       },
     });
   }
@@ -31,6 +30,7 @@
     {:else}
       <pre><code>{JSON.stringify(data.data, undefined, 2)}</code></pre>
     {/if}
+  <!-- {@debug data} -->
   {/if}
 
 
